@@ -130,26 +130,3 @@ class Task:
         )
 
 
-# ============================================
-# Testing — remove this when project is complete
-# ============================================
-
-# Create a valid task — all required fields provided
-task1 = Task(title="Build Login", project_id=1, priority="high")
-print(task1)    # calls __str__ automatically
-print()         # empty line for readability
-
-# Create task with invalid priority
-# __post_init__ will catch this and set to "medium"
-task2 = Task(title="Fix Bug", project_id=1, priority="wrong")
-print(task2)
-print()
-
-# Test @property — accessed like attribute, no ()
-print(f"Is task1 completed? {task1.is_completed}")      # False
-print(f"Is task1 high priority? {task1.is_high_priority}")  # True
-print()
-
-# Test methods — mark task as complete
-task1.mark_complete()
-print(f"Is task1 completed now? {task1.is_completed}")  # True
