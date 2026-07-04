@@ -1,0 +1,19 @@
+# ============================================
+# requirements.txt
+# All external packages needed for this project
+# Install all at once using:
+# pip install -r requirements.txt
+# ============================================
+
+# colorama → adds colors to terminal output
+# Makes CLI look professional and readable
+# Example: green for success, red for errors
+colorama==0.4.6
+
+# tabulate → displays data in clean table format
+# Used when listing tasks and projects in terminal
+# Example:
+# | ID | Title       | Status | Priority |
+# |----|-------------|--------|----------|
+# | 1  | Build Login | todo   | high     |
+tabulate==0.9.0
