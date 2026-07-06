@@ -139,3 +139,19 @@ def init_db():
 # Imported      → from db.database import get_connection → init_db() does NOT run ✅
 if __name__ == "__main__":
     init_db()
+
+
+
+    
+    # Test connection
+    conn = get_connection()
+    cursor = conn.cursor()
+    
+    # Check tables created
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
+    tables = cursor.fetchall()
+    print("\nTables created:")
+    for table in tables:
+        print(f"  → {table['name']}")
+    
+    conn.close()
