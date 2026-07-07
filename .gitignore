@@ -9,3 +9,5 @@ venv/
 *.sqlite3
 dist/
 build/
+*.db
+task_manager.db
