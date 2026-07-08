@@ -30,6 +30,18 @@ def get_connection():
     # Without row_factory → returns tuple → (1, "Build Website", "active") 😕
     # With row_factory    → returns dict  → {"id": 1, "name": "Build Website"} ✅
     connection.row_factory = sqlite3.Row
+   # sqlite3.Row
+   # Row = a tool INSIDE that toolbox!
+   # specifically made to convert
+   # database results into readable format!
+    # Database stores data like this internally:
+# (1, "Build Website", "active", "2026-07-06")
+# Just values — no labels! 😕
+
+# sqlite3.Row converts it to:
+# id=1, name="Build Website", 
+# status="active", created_at="2026-07-06"
+# Now has labels! ✅
 
     # Return connection so other functions can use it!
     return connection
